@@ -10,7 +10,7 @@
 
 <body>
 <div class="container mt-5">
-    <h2>To-Do List</h2>
+    <h2>Liste de produit</h2>
 
     <a href="annonce.php"><button>Ajouter une commande</button></a>
 
