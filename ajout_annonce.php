@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
         $nom_err = 'Nom d\'utilisateur déjà existant.';
         session_start();
         $_SESSION['nom_err'] = $nom_err;
-        header("Location: index.php");
+        header("Location: annonce.php?STATUS=Nom d'utilisateur déjà existant");
         exit();
     } else {
         $sql_insert = "INSERT INTO annonce (nom_utilisateur, numero_tel, titre_annonce, description_annonce, date_ajout) 
