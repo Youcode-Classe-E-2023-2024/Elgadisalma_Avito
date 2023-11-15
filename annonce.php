@@ -46,10 +46,12 @@ unset($_SESSION['nom_err']);
             <button class="btn btn-outline-secondary" type="submit" name="submit">Ajouter</button>
         </div>
 
+    </form>
+
         <div class="input-group mb-3">
             <a href="index.php"><button class="btn btn-outline-secondary"  name="revenir">Revenir à la page d'acceuil</button></a>
         </div>
-    </form>
+
 </div>
 
 </body>
