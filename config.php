@@ -20,12 +20,30 @@ $requete_creation_table_annonce = "
         description_annonce VARCHAR(255),
         date_ajout DATE
     )
+    
+";
+$requete_creation_table_utilisateur = "
+    CREATE TABLE IF NOT EXISTS utilisateur (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        nom_utilisateur VARCHAR(255) UNIQUE NOT NULL,
+        numero_tel VARCHAR(255),
+        password VARCHAR(255)
+    )
 ";
 
 
-if (!$link->query($requete_creation_table_annonce ) === TRUE) {
-    echo "error in table creation : annonce";
-} 
+
+
+// if ($link->query($requete_creation_table_annonce) === TRUE && $link->query($requete_creation_table_utilisateur) === TRUE) {
+//     echo "Tables 'annonce' et 'utilisateur' créées avec succès.";
+// } else {
+//     echo "Erreur lors de la création des tables : " . $link->error;
+// }if ($link->query($requete_creation_table_annonce) === TRUE && $link->query($requete_creation_table_utilisateur) === TRUE) {
+//     echo "Tables 'annonce' et 'utilisateur' créées avec succès.";
+// } else {
+//     echo "Erreur lors de la création des tables : " . $link->error;
+// }
+
 
 
 ?>
