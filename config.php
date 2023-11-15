@@ -16,11 +16,11 @@ $requete_creation_table_annonce = "
         nom_utilisateur VARCHAR(255) UNIQUE NOT NULL,
         numero_tel VARCHAR(255),
         titre_annonce VARCHAR(255),
+        etat_annonce VARCHAR(20) DEFAULT 'à vendre' NOT NULL;
         description_annonce VARCHAR(255),
         date_ajout DATE
     )
 ";
-
 
 
 if (!$link->query($requete_creation_table_annonce ) === TRUE) {
