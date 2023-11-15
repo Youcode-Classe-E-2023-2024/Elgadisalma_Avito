@@ -29,8 +29,8 @@
         <tbody id="taskTableBody">
         <?php
             include_once 'afficher_annonce.php';
-            $annonce = get();
-            foreach ($annonce as $annonce) {
+            $annonces = get_annonce();
+            foreach ($annonces as $annonce) {
         ?>
             <tr>
                 <td><?php echo $annonce['nom_utilisateur'] ;?></td>
