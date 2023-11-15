@@ -1,8 +1,4 @@
-<?php
-session_start();
-$nom_err = isset($_SESSION['nom_err']) ? $_SESSION['nom_err'] : '';
-unset($_SESSION['nom_err']);
-?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +17,7 @@ unset($_SESSION['nom_err']);
     
     <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Nom d'utilisateur" aria-label="Nom d'utilisateur" id="userName" name="userName">
-            <span class="text-danger"><?php echo $nom_err; ?></span>
+            <span class="text-danger"><?php if(isset($_GET['STATUS']))echo $_GET['STATUS'] ?></span>
         </div>
 
 
