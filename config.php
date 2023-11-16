@@ -30,41 +30,6 @@ $requete_creation_table_utilisateur = "
         password VARCHAR(255)
     )
 ";
-$nom_utilisateur_ali = 'Ali';
-$password_ali = 'motdepasse_ali';
-$sql_insert_ali = "INSERT INTO users (nom_utilisateur, password) VALUES ('$nom_utilisateur_ali', '$password_ali')";
-
-if ($link->query($sql_insert_ali) === TRUE) {
-    echo "Utilisateur Ali ajouté avec succès.<br>";
-} else {
-    if (mysqli_errno($link) == 1062) {  // Code d'erreur pour violation d'unicité
-        echo "L'utilisateur avec le nom '$nom_utilisateur_ali' existe déjà.<br>";
-    } else {
-        echo "Erreur lors de l'insertion de l'utilisateur Ali : " . $link->error . "<br>";
-    }
-}
-// // Ajout de l'utilisateur Salma
-// $nom_utilisateur_salma = 'Salma';
-// $password_salma = 'motdepasse_salma';
-// $sql_insert_salma = "INSERT INTO users (nom_utilisateur, password) VALUES ('$nom_utilisateur_salma', '$password_salma')";
-
-// if ($link->query($sql_insert_salma) === TRUE) {
-//     echo "Utilisateur Salma ajouté avec succès.<br>";
-// } else {
-//     echo "Erreur lors de l'insertion de l'utilisateur Salma : " . $link->error . "<br>";
-// }
-
-
-
-// if ($link->query($requete_creation_table_annonce) === TRUE && $link->query($requete_creation_table_utilisateur) === TRUE) {
-//     echo "Tables 'annonce' et 'utilisateur' créées avec succès.";
-// } else {
-//     echo "Erreur lors de la création des tables : " . $link->error;
-// }if ($link->query($requete_creation_table_annonce) === TRUE && $link->query($requete_creation_table_utilisateur) === TRUE) {
-//     echo "Tables 'annonce' et 'utilisateur' créées avec succès.";
-// } else {
-//     echo "Erreur lors de la création des tables : " . $link->error;
-// }
 
 
 
