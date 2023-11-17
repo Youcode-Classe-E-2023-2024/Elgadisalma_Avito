@@ -13,7 +13,7 @@ if($link == false){
 $requete_creation_table_annonce = "
     CREATE TABLE IF NOT EXISTS annonce (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        nom_utilisateur VARCHAR(255) UNIQUE NOT NULL,
+        nom_utilisateur VARCHAR(255) NOT NULL,
         numero_tel VARCHAR(255),
         titre_annonce VARCHAR(255),
         etat_annonce VARCHAR(20) DEFAULT 'à vendre' NOT NULL,
@@ -22,6 +22,7 @@ $requete_creation_table_annonce = "
     )
     
 ";
+
 $requete_creation_table_utilisateur = "
     CREATE TABLE IF NOT EXISTS utilisateur (
         id INT AUTO_INCREMENT PRIMARY KEY,
