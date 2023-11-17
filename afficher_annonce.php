@@ -1,7 +1,7 @@
 <?php
 function get_annonce() {
     require_once 'config.php';
-    $annonce = [];
+        $annonce = [];
     
     
         $sql = "SELECT * FROM annonce  ;";
