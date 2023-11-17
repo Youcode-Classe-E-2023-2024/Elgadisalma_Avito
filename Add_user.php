@@ -34,7 +34,7 @@ $sql_check_user = "SELECT id FROM utilisateur WHERE nom_utilisateur = '$nom_util
         $sql_insert = "INSERT INTO utilisateur (nom_utilisateur, numero_tel ,password) 
                         VALUES ('$nom_utilisateur', '$numero_tel','$password')";
         if ($link->query($sql_insert) === TRUE) {
-            header("location:../index.php?profil=added_successfully");
+            header("location:../connexion.php?profil=added_successfully");
             exit();
         } else {
             echo "Erreur: " . $link->error;
