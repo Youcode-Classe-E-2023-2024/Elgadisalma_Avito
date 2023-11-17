@@ -5,7 +5,7 @@
 
 function get_mes_annonces() {
 
-    session_start();
+    // session_start();
 
     require_once 'config.php';
     $nom_utilisateur = isset($_SESSION['nom_utilisateur']) ? $_SESSION['nom_utilisateur'] : '';
