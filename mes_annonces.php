@@ -56,11 +56,11 @@ if(!isset($_SESSION['id'])){
                 <td><?php echo $annonce['etat_annonce'] ;?> </td>
                 <td><?php echo $annonce['description_annonce'] ;?> </td>
                 <td>
-                <a href="edit.php">
-                    <button class="btn btn-warning btn-sm" >
-                    <i class="fas fa-edit"></i> Modifier
-                </button>
-                </a>
+                <a href="edit.php?id=<?php echo $annonce['id']; ?>">
+    <button class="btn btn-warning btn-sm">
+        <i class="fas fa-edit"></i> Modifier
+    </button>
+</a>
                 
                 <form action="delete.php" method="get" style="display: inline;">
                     <input type="hidden" name="id" value="<?php echo $annonce['id']; ?>">
