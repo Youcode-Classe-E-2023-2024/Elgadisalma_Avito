@@ -10,9 +10,15 @@
 
 <body>
 <div class="container mt-5">
-    <h2>Liste de produit</h2>
-
-    <a href="annonce.php"><button>Ajouter une commande</button></a>
+    
+    <h2>Liste d'annonce'</h2>
+    <a href="mes_annonces.php"><button type="button" class="btn btn-primary">Mes annonces</button></a>
+    <br>
+    <form action="log_out_traitement.php" method="post">
+    <button type="submit" class="btn btn-danger">Log out</button>
+    </form>
+    <br>
+    <a href="annonce.php"><button>Ajouter une annonce</button></a>
 
     <table class="table mt-3">
         <thead>
@@ -22,7 +28,7 @@
                 <th>Titre du produit</th>
                 <th>État</th>
                 <th>Description du produit</th>
-                
+                <!-- <th>Actions</th> -->
             </tr>
         </thead>
         
@@ -38,7 +44,16 @@
                 <td><?php echo $annonce['titre_annonce'] ;?> </td>
                 <td><?php echo $annonce['etat_annonce'] ;?> </td>
                 <td><?php echo $annonce['description_annonce'] ;?> </td>
-                <td>
+                <!-- <td>
+                <button class="btn btn-warning btn-sm" >
+                    <i class="fas fa-edit"></i> Modifier
+                </button>
+                <button class="btn btn-danger btn-sm" >
+                <i class="fas fa-trash"></i> <a href="delete.php?id=">Supprimer</a>
+                </button>
+
+
+            </td> -->
             </td>
             </tr>
         <?php } ?>
