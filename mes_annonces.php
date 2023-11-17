@@ -12,7 +12,7 @@ if(!isset($_SESSION['id'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -56,9 +56,12 @@ if(!isset($_SESSION['id'])){
                 <td><?php echo $annonce['etat_annonce'] ;?> </td>
                 <td><?php echo $annonce['description_annonce'] ;?> </td>
                 <td>
-                <button class="btn btn-warning btn-sm" >
+                <a href="edit.php">
+                    <button class="btn btn-warning btn-sm" >
                     <i class="fas fa-edit"></i> Modifier
                 </button>
+                </a>
+                
                 <form action="delete.php" method="get" style="display: inline;">
                     <input type="hidden" name="id" value="<?php echo $annonce['id']; ?>">
                     <button type="submit" class="btn btn-danger btn-sm">
